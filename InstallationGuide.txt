@@ -1,0 +1,29 @@
+I hope this is visible, if not, i will be truely be upset and my entire week will be ruined. cheers. (test code)
+
+
+you will need to download/download a few things:
+
+make a github account
+download git: https://git-scm.com/download/win
+
+once downloaded open the git command prompt and enter these two following lines:
+
+git config --global user.name "your_username"
+git config --global user.email "your_email_address@example.com"
+
+check with this line:
+git config --global --list
+
+download vscode: https://code.visualstudio.com/download
+
+once vscode has downloaded you will need to set up the git repository with vscode.
+
+link for the repository: https://github.com/danielas1901/Big-Bev-Coding
+
+on vscode, you'll have to go to "Source Control" which the symbol of three connected dots on the left, and hit "Clone repository"
+
+It will prompt you to add in a link
+
+link: https://github.com/danielas1901/Big-Bev-Coding.git
+
+after, i'll have to example how to refresh the repository make changes, save, and push those changes to the main repository
