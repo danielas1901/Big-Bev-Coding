@@ -6,12 +6,13 @@ html {
   margin: 0px;
   padding: 0px;
   overscroll-behavior: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background: url("Images/about\ background.jpeg");
+  background: url("Images/1015944.jpg");
   background-size: cover;
 }
 
@@ -42,9 +43,7 @@ body {
   text-align: center;
   padding: 10px 30px;
   text-decoration: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -60,7 +59,6 @@ body {
   position: relative;
   display: block;
   font-size: 10em;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   justify-content: center;
   margin: 0 auto;
   margin-top: 100px;

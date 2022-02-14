@@ -6,6 +6,7 @@ html {
   margin: 0px;
   padding: 0px;
   overscroll-behavior: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 body {
@@ -37,9 +38,7 @@ body {
   text-align: center;
   padding: 10px 30px;
   text-decoration: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: black;
 }
 
