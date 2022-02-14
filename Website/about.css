@@ -22,6 +22,7 @@ body {
 }
 
 .Navbar {
+  z-index: 1000;
   top: 0;
   list-style-type: none;
   margin: 0px;
@@ -41,7 +42,7 @@ body {
   overflow: hidden;
   display: block;
   text-align: center;
-  padding: 10px 30px;
+  padding: 0.6rem 2rem;
   text-decoration: none;
   font-size: 1.5rem;
   color: black;
@@ -61,13 +62,13 @@ body {
   font-size: 10em;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 6rem;
   margin-bottom: 40px;
   width: 60%;
   height: 50rem;
   background-color: rgb(60, 60, 61);
   color: aliceblue;
-  box-shadow: 0px 0px 5px 1px;
+  box-shadow: 0px 0px 5px 1px black;
 }
 
 .container h1 {
@@ -75,4 +76,42 @@ body {
   padding: 30px;
   font-size: 30%;
   font-style: italic;
+}
+
+.bottom {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  bottom: 0;
+  width: 100vw;
+  box-shadow: 0px -2px 5px 1px;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(white, lightgrey);
+}
+
+.foot {
+  display: inline-block;
+}
+
+.Fitem {
+  display: block;
+  text-decoration: none;
+  padding: 0.3rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.Fitem:hover {
+  cursor: default;
+}
+
+#return:hover {
+  cursor: pointer;
+  color: grey;
 }

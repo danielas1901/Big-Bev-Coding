@@ -21,6 +21,7 @@ body {
 }
 
 .Navbar {
+  z-index: 1000;
   top: 0;
   list-style-type: none;
   margin: 0px;
@@ -40,7 +41,7 @@ body {
   overflow: hidden;
   display: block;
   text-align: center;
-  padding: 10px 30px;
+  padding: 0.6rem 2rem;
   text-decoration: none;
   font-size: 1.5rem;
   color: black;
@@ -144,4 +145,42 @@ p {
   margin: auto;
   display: inline-block;
   text-align: left;
+}
+
+.bottom {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  bottom: 0;
+  width: 100vw;
+  box-shadow: 0px -2px 5px 1px;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(white, lightgrey);
+}
+
+.foot {
+  display: inline-block;
+}
+
+.Fitem {
+  display: block;
+  text-decoration: none;
+  padding: 0.3rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.Fitem:hover {
+  cursor: default;
+}
+
+#return:hover {
+  cursor: pointer;
+  color: grey;
 }
