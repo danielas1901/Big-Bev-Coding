@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Name</title>
-    <link rel="stylesheet" href="cssFiles/about.css">
+    <link rel="stylesheet" href={{ url_for('static', filename='/css/about.css') }}>
 </head>
 
 <body>
     <a id="begin"></a>
     <div class="top">
     <ul class="Navbar">
-        <li class="headItem"><a class="nav" href="main.html">Home Page</a></li>
-        <li class="headItem"><a class="nav" href="second.html">Page two</a></li>
+        <li class="headItem"><a class="nav" href={{ url_for('mod_dash.main_page') }}>Home Page</a></li>
+        <li class="headItem"><a class="nav" href={{ url_for('mod_dash.second_page') }}>Page two</a></li>
         <li class="headItem"><a class="nav" href="#">Explore ↓</a>
             <ul class="drop">
                 <li id="first"><a href="#">Option1</a></li>
@@ -22,7 +22,7 @@
                 <li><a href="#">Option3</a></li>
             </ul>
         </li>
-        <li class="headItem" id="about"><a class="nav" href="about.html">About</a></li>
+        <li class="headItem" id="about"><a class="nav" href={{ url_for('mod_dash.about_us_page') }}>About</a></li>
     </ul>
     </div>
     <div class="container">
