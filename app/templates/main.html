@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Name</title>
+    <link rel="stylesheet" href="/static/css/mainpage.css">
+</head>
+
+<body>
+    <a id="begin"></a>
+    <div class="top">
+        <ul class="Navbar">
+            <li class="headItem"><a class="nav" href="main.html">Home Page</a></li>
+            <li class="headItem"><a class="nav" href={{ url_for('mod_dash.second_page') }}>Page two</a></li>
+            <li class="headItem"><a class="nav" href="#">Explore ↓</a>
+                <ul class="drop">
+                    <li id="first"><a  href="#">Option1</a></li>
+                    <li><a href="#">Option2</a></li>
+                    <li><a href="#">Option3</a></li>
+                </ul>
+            </li>
+            <li class="headItem" id="about"><a class="nav" href="about.html">About</a></li>
+        </ul>
+    </div>
+    <div class="greet">
+        <div class="overlay">
+            <div class="text">
+                <h1>Welcome</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae et sed excepturi explicabo repudiandae! Incidunt
+                    dolorem accusamus, dolore facere cupiditate suscipit! Perspiciatis aliquid fuga placeat impedit earum natus
+                    velit
+                    ipsa.
+                </p>
+                <a href="#">Button 1</a>
+                <a href="#">Button 2</a>
+            </div>
+        </div>
+    </div>
+    <div class="other">
+        <div class="row1">
+            <link rel="stylesheet" href={{ url_for('static', filename='/images/background.jpg') }}>
+            <div class="sub">
+                <h2>Main Feature/Idea 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure iusto ipsa architecto voluptatem amet
+                    voluptate, eos vel veritatis vero doloremque.</p>
+            </div>
+            <img src="/static/images/background%20maybe.jpg" alt="">
+        </div>
+        <div class="row2">
+            <div class="sub">
+                <h2>Main Feature/Idea 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure iusto ipsa architecto voluptatem amet
+                    voluptate, eos vel veritatis vero doloremque. CR7=GOAT btw.</p>
+            </div>
+            <img src="/static/images/background.jpg" alt="Ronny">
+        </div>
+        <div class="row3">
+            <img src="/static/images/20200801_102235.jpg" alt="">
+            <div class="sub">
+                <h2>Main Feature/Idea 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure iusto ipsa architecto voluptatem amet
+                    voluptate, eos vel veritatis vero doloremque.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <ul class="footer">
+            <li class="foot"><a class="Fitem" id="return" href="#begin">Return to top</a></li>
+            <li class="foot"><a class="Fitem" >Website name, 2022</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
