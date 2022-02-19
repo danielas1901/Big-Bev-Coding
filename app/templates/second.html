@@ -13,6 +13,7 @@
     <a id="begin"></a>
     <div class="top">
         <ul class="Navbar">
+            {%if current_user.is_authenticated%}
             <li class="headItem"><a class="nav" href={{ url_for('mod_dash.main_page') }}>Home Page</a></li>
             <li class="headItem"><a class="nav" href={{ url_for('mod_dash.second_page') }}>Page two</a></li>
             <li class="headItem"><a class="nav" href="#">Explore ↓</a>
@@ -22,7 +23,12 @@
                     <li><a href="#">Option3</a></li>
                 </ul>
             </li>
+            {%endif%}
             <li class="headItem" id="about"><a class="nav" {{ url_for('mod_dash.about_us_page') }}>About</a></li>
+        {%if not current_user.is_authenticated%}
+        <li class="headItem"><a class="nav" href={{ url_for('auth.login') }}>Login</a></li>
+        <li class="headItem"><a class="nav" href={{ url_for('auth.signup') }}>Sign Up</a></li>
+        {%endif%}
         </ul>
     </div>
     <div class="placeholder">

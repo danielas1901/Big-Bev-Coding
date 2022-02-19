@@ -39,40 +39,36 @@ def login():
 
             login_user(user, remember=True)
 
-            return redirect(url_for('auth.home'))
+            return redirect(url_for('mod_dash.main_page'))
 
         flash('Wrong email or password', 'error-message')
 
     return render_template("auth/login.html", form=form)
 
-
-@mod_auth.route('/signup', methods=['GET', 'POST'])
+@mod_auth.route('/signup', methods=['GET','POST'])
 def signup():
 
     form = SignupForm(request.form)
 
     # Verify the sign in form
-    if form.validate_on_submit():
+    if request.method == 'POST':
         user = User.query.filter_by(email=form.email.data).first()
+
     # Receieve signup parameters
     # Check if the email already exists
         if user:
             flash('Email already exists, please use Login page')
+            print("ALREADY EXISTS")
             return redirect(url_for('auth.login'))
-    
+        
         new_user = User(email = form.email.data,
-                        name = form.name.data,
+                        name = form.username.data,
                         password = generate_password_hash(form.password.data),
-                        role = 0,
+                        role = 1,
                         status = 1)
-
         db.session.add(new_user)
         db.session.commit()
+        print("added new member")
+        return redirect(url_for('auth.login'))
 
-    return render_template("auth/signup.html", form=form)
-
-
-@mod_auth.route('/profile')
-@login_required
-def profile():
-    return render_template("auth/profile.html", name=current_user.name)
+    return render_template('auth/signup.html', form=form)

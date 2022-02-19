@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Name</title>
+    <title>QuickQuit</title>
     <link rel="stylesheet" href="/static/css/mainpage.css">
 </head>
 
@@ -13,16 +13,22 @@
     <a id="begin"></a>
     <div class="top">
         <ul class="Navbar">
+            {%if current_user.is_authenticated%}
             <li class="headItem"><a class="nav" href={{ url_for('mod_dash.main_page') }}>Home Page</a></li>
             <li class="headItem"><a class="nav" href={{ url_for('mod_dash.second_page') }}>Page two</a></li>
             <li class="headItem"><a class="nav" href="#">Explore ↓</a>
                 <ul class="drop">
-                    <li id="first"><a  href="#">Option1</a></li>
+                    <li id="first"><a href="#">Option1</a></li>
                     <li><a href="#">Option2</a></li>
                     <li><a href="#">Option3</a></li>
                 </ul>
             </li>
-            <li class="headItem" id="about"><a class="nav" href={{ url_for('mod_dash.about_us_page') }}>About</a></li>
+            {%endif%}
+        {%if not current_user.is_authenticated%}
+        <li class="headItem"><a class="nav" href={{ url_for('auth.login') }}>Login</a></li>
+        <li class="headItem"><a class="nav" href={{ url_for('auth.signup') }}>Sign Up</a></li>
+        {%endif%}
+        <li class="headItem"><a class="nav" href={{ url_for('mod_dash.about_us_page') }}>About</a></li>
         </ul>
     </div>
     <div class="greet">

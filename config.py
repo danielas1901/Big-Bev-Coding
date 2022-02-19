@@ -17,13 +17,6 @@ class Config(object):
     # Secret key for signing cookies
     SECRET_KEY = "secret"
 
-    # Recaptcha secret keys
-    RECAPTCHA_PUBLIC_KEY = "6LeYIbsSAAAAACRPIllxA7wvXjIE411PfdB2gt2J"
-    RECAPTCHA_PRIVATE_KEY = "6LeYIbsSAAAAAJezaIq3Ft_hSTo0YtyeFG-JgRtu"
-
-    # Set Bootswatch theme
-    FLASK_ADMIN_SWATCH = 'cerulean'
-
 class ProductionConfig(Config):
     DEBUG = False
 
