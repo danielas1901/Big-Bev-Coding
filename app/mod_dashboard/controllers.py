@@ -9,7 +9,7 @@ from app import db
 # Define the blueprint: 'auth', set its url prefix: app.url/auth
 mod_dash = Blueprint('mod_dash', __name__, url_prefix='/')
 
-@mod_dash.route('/dashboard')
+@mod_dash.route('/main')
 @mod_dash.route('/home')
 @mod_dash.route('/')
 #@login_required
