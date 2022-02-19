@@ -39,14 +39,14 @@ if(packs<=quit):
         for j in range(7):
             if(j == noSmokeDays[0] or j == noSmokeDays[1]):
                 print(weekDays[j],"= 0 packs\n")
-            spackPerDay = round(packPerDay,2)
+            spackPerDay = round(packPerDay,1)
             print(weekDays[j],"=",spackPerDay, "packs\n")
     
 
             
         extra = int(input("\nPlease specify the amount of extra packs you smoked, if any during this week\n"))
         if(extra>0):
-            reduction = 1 + (extra/3)
+            reduction = 1 + (extra/4)
         else:
             reduction = 1
 
