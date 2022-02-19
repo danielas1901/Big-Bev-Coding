@@ -19,3 +19,7 @@ def main_page():
 @mod_dash.route('/second')
 def second_page():
     return render_template("second.html")
+
+@mod_dash.route('/about_us')
+def about_us_page():
+    return render_template("about.html")
