@@ -26,9 +26,9 @@ class User():
         self.email = input("Emter your email:\t");
     
     def send(self):
-        to = [str(self.email)]
+        to = ["averythomsen@icloud.ca", "danielsa1901@gmail.com"];
         subject = 'Thanks for joining QuickQuit!'
-        body = "This is only the beginning of a healthier, happier lifestyle!"
+        body = "You now have access to the customizable calendar on our website!\nStart planning a healthier, happier life now!\n\nBest of luck!\nQuickQuit Team"
         email_text = """\
         From: %s
         To: %s
