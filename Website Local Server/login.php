@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Name - About</title>
+    <title>Quick Quit - Login</title>
     <link rel="stylesheet" href="cssFiles/login.css">
 </head>
 
@@ -16,17 +20,17 @@
             <li class="headItem">
                 <div class="logo"><img src="cssFiles/Images/logo.jpg" alt=""></div>
             </li>
-            <li class="headItem"><a class="nav" href="main.html">Home Page</a></li>
-            <li class="headItem"><a class="nav" href="second.html">Page two</a></li>
+            <li class="headItem"><a class="nav" href="main.php">Home</a></li>
+            <li class="headItem"><a class="nav" href="second.php">Features</a></li>
             <li class="headItem"><a class="nav" href="#">Explore ↓</a>
                 <ul class="drop">
-                    <li id="first"><a href="#">Option1</a></li>
-                    <li><a href="#">Option2</a></li>
-                    <li><a href="#">Option3</a></li>
+                    <li id="first"><a href="#">Schedule</a></li>
+                    <li><a href="#">Create</a></li>
+                    <li><a href="#">Progress</a></li>
                 </ul>
             </li>
-            <li class="headItem" id="about"><a class="nav" href="about.html">About</a></li>
-            <li class="headItem" id="about"><a class="nav" href="#">Log In</a></li>
+            <li class="headItem" id="about"><a class="nav" href="about.php">About</a></li>
+            <li class="headItem" id="about"><a class="nav" href="login.php">Log In</a></li>
         </ul>
     </div>
     <div class="big">
@@ -35,7 +39,7 @@
                 <h1>Sign Up</h1>
                 <div class="form">
                     <img src="cssFiles/Images/loginsymbol.png" alt="login">
-                    <form action="connect.php" method="POST">
+                    <form action="include/signup.inc.php" method="POST">
                         <div class="entry">
                             <label for="firstname">First Name</label>
                             <br>
@@ -57,11 +61,30 @@
                         <div class="entry">
                             <label for="pass">Password</label>
                             <br>
-                            <input type="password" name="pass" id="pass">
+                            <input type="password" name="password" id="password">
                         </div>
-                        <input class="submit" type="submit" value="Sign Up!">
+                        <input class="submit" type="submit" name="submit" value="Sign Up!">
                     </form>
                 </div>
+                <?php
+    if (isset($_GET["error"])){
+        if($_GET["error"] == "emptyinput"){
+            echo "<p>Fill in all fields!</p>";
+        }
+        elseif($_GET["error"] == "invalidemail"){
+            echo "<p>Choose a proper email!</p>";
+        }
+        elseif($_GET["error"] == "emailinuse"){
+            echo "<p>Email already in use, please login!</p>";
+        }
+        elseif($_GET["error"] == "stmtfailed"){
+            echo "<p>Something went real bad, try again!</p>";
+        }
+        elseif($_GET["error"] == "none"){
+            echo "<p>You signed up!</p>";
+        }
+    }
+?>
             </div>
         </div>
         <div class="container">
@@ -70,7 +93,7 @@
                 <p>Already have an Account?</p>
                 <div class="form">
                     <img src="cssFiles/Images/loginsymbol.png" alt="login">
-                    <form action="" method="`">
+                    <form action="include/login.inc.php" method="POST">
                         <div class="entry">
                             <label for="email">Email</label>
                             <br>
@@ -80,13 +103,24 @@
                         <div class="entry">
                             <label for="pass">Password</label>
                             <br>
-                            <input type="password" name="pass" id="pass">
+                            <input type="password" name="password" id="password">
                         </div>
-                        <input class="submit" type="submit" value="Login!">
+                        <input class="submit" type="submit" name="submit" value="Login!">
                     </form>
             </div>
+                            <?php
+    if (isset($_GET["error"])){
+        if($_GET["error"] == "emptyinput"){
+            echo "<p>Fill in all fields!</p>";
+        }
+        elseif($_GET["error"] == "wronglogin"){
+            echo "<p>Hm, that info didn't match!</p>";
+        }
+    }
+?>
         </div>
     </div>
+
     <div class="bottom">
         <ul class="footer">
             <li class="foot"><a class="Fitem" id="return" href="#begin">Return to top</a></li>
